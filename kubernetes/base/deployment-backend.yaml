@@ -45,7 +45,7 @@ spec:
       - name: tmp
         emptyDir:
           medium: Memory
-          sizeLimit: 32Mi
+          sizeLimit: 64Mi
 
       affinity:
         podAntiAffinity:
@@ -96,11 +96,11 @@ spec:
 
         resources:
           requests:
-            memory: "128Mi"
-            cpu: "100m"
-          limits:
             memory: "256Mi"
             cpu: "200m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
 
         # Container-level security context
         securityContext:
@@ -140,5 +140,3 @@ spec:
           initialDelaySeconds: 0
           periodSeconds: 5
           failureThreshold: 30
-
-        
