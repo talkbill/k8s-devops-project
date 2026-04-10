@@ -13,7 +13,9 @@ resources:
 - ingress.yaml
 - hpa.yaml
 - pdb.yaml
-- networkpolicies.yaml
+- default-deny-all.yaml
+- frontend-policy.yaml
+- backend-policy.yaml
 
 images:
 - name: REGISTRY/devops-project-backend
